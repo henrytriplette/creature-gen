@@ -5,7 +5,7 @@
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="40" height="40" :src="`/img/creature/${creatureSimple.type}.png`"
+                    <img class="uk-border-circle" width="40" height="40" :src="`${baseUrl}img/creature/${creatureSimple.type}.png`"
                         alt="Avatar">
                 </div>
                 <div class="uk-width-expand">
@@ -34,7 +34,7 @@
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="40" height="40" :src="`/img/creature/0.png`"
+                    <img class="uk-border-circle" width="40" height="40" :src="`${baseUrl}img/creature/0.png`"
                         alt="Avatar">
                 </div>
                 <div class="uk-width-expand">
@@ -61,6 +61,12 @@
 <script>
 export default {
     name: "Generate Creature",
+    setup() {
+        const baseUrl =  import.meta.env.VITE_BASE_URL_ASSETS;
+        return {
+            baseUrl
+        }
+    },
     data() {
         return {
             title: 'Generate Creature',
