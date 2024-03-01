@@ -1,0 +1,26 @@
+{
+  "name": "triplette-creaturegen",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "yarn dev",
+    "build": "yarn build:prod",
+    "dev": "vite --config config/vite.config.dev.js --host --mode development",
+    "build:dev": "vite build --config config/vite.config.dev.js --mode develweb",
+    "build:prod": "vite build --config config/vite.config.prod.js --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "sass": "^1.71.1",
+    "uikit": "^3.18.3",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.4",
+    "vite-plugin-mkcert": "^1.17.3"
+  }
+}
